@@ -1,1 +1,146 @@
-body{font-family:Montserrat,sans-serif;background-color:#f4f4f9;color:#2e2f42;display:flex;justify-content:center;align-items:center;height:100vh;margin:0}img{display:block;width:100%;height:100%;object-fit:cover}.gb-btn{position:absolute;top:20px;left:20px;text-decoration:none;color:inherit;text-align:center;display:block;max-width:120px;font-size:16px;background:linear-gradient(135deg,#727eff,#727eff);border-radius:8px;padding:10px 20px;font-weight:600;transition:transform .2s ease,box-shadow .2s ease,background-color .25s linear}.gb-btn:hover,.gb-btn:focus{background:linear-gradient(135deg,#6e24bd,#6e24bd);transform:translateY(-3px);box-shadow:0 6px 12px #26024466}.container{width:400px;background:#fff;padding:32px;border-radius:16px;box-shadow:0 10px 30px #00000026;border:1px solid rgba(0,0,0,.1);text-align:center}.input-data{outline:none;font-size:16px;line-height:1.5;letter-spacing:.04em;border:2px solid #808080;border-radius:8px;width:280px;height:42px;padding:8px 16px;margin-right:8px;transition:border .3s ease}.input-data:focus{border:2px solid #4e75ff}.input-data:disabled{color:gray;background-color:#fafafa;pointer-events:none;cursor:not-allowed}.start-btn-disable{font-size:16px;font-weight:500;color:#989898;border:none;margin-top:10px;border-radius:8px;padding:10px 16px;width:90px;height:42px;background-color:#232638;cursor:not-allowed}.start-btn-active{font-size:16px;font-weight:500;color:#fff;border:none;border-radius:8px;padding:10px 16px;width:90px;height:42px;background:linear-gradient(135deg,#4e75ff,#3a5de0);transition:background .25s linear,transform .2s ease;cursor:pointer}.start-btn-active:hover,.start-btn-active:focus{background:linear-gradient(135deg,#6c8cff,#5673f0);transform:translateY(-2px)}.timer{display:flex;justify-content:center;column-gap:24px;margin-top:20px}.value{font-size:42px;font-weight:700;color:#2e2f42;text-align:center}.label{text-align:center;text-transform:uppercase;font-size:12px;font-weight:600;color:#555}.toast-icon{stroke:#fff;fill:#fff}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f9;
+  color: #2e2f42;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Go Back Button */
+/* Go Back Button */
+.gb-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  display: block;
+  max-width: 120px;
+  font-size: 16px;
+  background: linear-gradient(135deg, #727eff, #727eff);
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 250ms linear;
+}
+
+.gb-btn:hover,
+.gb-btn:focus {
+  background: linear-gradient(135deg, #6e24bd, #6e24bd);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(38, 2, 68, 0.4);
+}
+
+/* Container */
+.container {
+  width: 400px;
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Input Field */
+.input-data {
+  outline: none;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  border: 2px solid #808080;
+  border-radius: 8px;
+  width: 280px;
+  height: 42px;
+  padding: 8px 16px;
+  margin-right: 8px;
+  transition: border 0.3s ease;
+}
+
+.input-data:focus {
+  border: 2px solid #4e75ff;
+}
+
+.input-data:disabled {
+  color: #808080;
+  background-color: #fafafa;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Start Button */
+.start-btn-disable {
+  font-size: 16px;
+  font-weight: 500;
+  color: #989898;
+  border: none;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 10px 16px;
+  width: 90px;
+  height: 42px;
+  background-color: #232638;
+  cursor: not-allowed;
+}
+
+.start-btn-active {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+
+  padding: 10px 16px;
+  width: 90px;
+  height: 42px;
+  background: linear-gradient(135deg, #4e75ff, #3a5de0);
+  transition: background 250ms linear, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.start-btn-active:hover,
+.start-btn-active:focus {
+  background: linear-gradient(135deg, #6c8cff, #5673f0);
+  transform: translateY(-2px);
+}
+
+/* Timer Display */
+.timer {
+  display: flex;
+  justify-content: center;
+  column-gap: 24px;
+  margin-top: 20px;
+}
+
+.value {
+  font-size: 42px;
+  font-weight: bold;
+  color: #2e2f42;
+  text-align: center;
+}
+
+.label {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Snackbar/Toast */
+.toast-icon {
+  stroke: #ffffff;
+  fill: #ffffff;
+}
